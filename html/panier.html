@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANIER</title>
+    <link rel="stylesheet" href="../style/style.css">
+    
+    <style>
+        .panier-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .produit-panier {
+            display: flex;
+            align-items: center;
+            background: #f2e3de;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .produit-panier img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        
+        .produit-info {
+            flex-grow: 1;
+        }
+        
+        .produit-info h3 {
+            margin: 0;
+            color: #681c37;
+        }
+        
+        .produit-prix {
+            font-weight: bold;
+            color: #a02a50;
+        }
+        
+        .quantite {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .quantite button {
+            background: #681c37;
+            color: #f2e3de;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .quantite span {
+            margin: 0 10px;
+        }
+        
+        .total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #681c37;
+        }
+        
+        .vider-panier {
+            background: #c93b5e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+ @media (max-width: 1024px)
+  {
+  .produit-panier {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    width: 250px;
+    height: 250px;
+    margin: 15px auto;
+  }
+
+  .produit-panier img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+    object-fit: contain;
+  }
+
+  .produit-info {
+    width: 100%;
+  }
+
+  .produit-total {
+    margin-top: 5px;
+    font-size: 1em;
+  }
+
+  .quantite {
+    justify-content: center;
+  }
+
+  .total {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .vider-panier {
+    display: block;
+    margin: 20px auto;
+  }
+}
+    </style>
+</head>
+<body>
+  
+    <header>
+        <div class="logo">
+            <img src="../image/logo4-removebg-preview.png" alt="Rare Beauty Logo">
+            <span class="titre">Rare Beauty</span>  
+        </div>
+        <nav class="bout-liens">
+            <a href="../index.html">Accueil</a>
+            <a href="./BOUTIQUE.html">Boutique</a>
+            <a href="./panier.html">Panier</a>
+            <a href="./DESCRIPTION.html">Description</a>
+        </nav>
+        <div class="auth-liens">
+            <a href="./sign-up.html">S'inscrire</a>
+            <a href="./log in.html">Se connecter</a>
+        </div>
+    </header>
+    
+    <div class="boutique-header">
+        <h2 class="boutique-titre">LE PANIER</h2>
+        <p class="boutique-soustitre">Ici vous trouverez les articles que vous avez commandé</p>
+    </div>
+    
+    <div class="panier-container" id="panier-container">
+        
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const panierContainer = document.getElementById('panier-container');
+            const panier = JSON.parse(localStorage.getItem('panier')) || [];
+            
+            if (panier.length === 0) {
+                panierContainer.innerHTML = '<p>Votre panier est vide.</p>';
+                return;
+            }
+            
+            let total = 0;
+            panierContainer.innerHTML = '';
+            
+            panier.forEach(produit => {
+                const produitElement = document.createElement('div');
+                produitElement.className = 'produit-panier';
+                
+                const prixTotal = produit.prix * produit.quantite;
+                total += prixTotal;
+                
+                produitElement.innerHTML = `
+                    <img src="${produit.image}" alt="${produit.nom}">
+                    <div class="produit-info">
+                        <h3>${produit.nom}</h3>
+                        <div class="produit-prix">$${produit.prix}</div>
+                        <div class="quantite">
+                            <button onclick="changerQuantite('${produit.nom}', -1)">-</button>
+                            <span>${produit.quantite}</span>
+                            <button onclick="changerQuantite('${produit.nom}', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="produit-total">$${prixTotal.toFixed(2)}</div>
+                `;
+                
+                panierContainer.appendChild(produitElement);
+            });
+            
+            const totalElement = document.createElement('div');
+            totalElement.className = 'total';
+            totalElement.innerHTML = `Total: $${total.toFixed(2)}`;
+            
+            const viderButton = document.createElement('button');
+            viderButton.className = 'vider-panier';
+            viderButton.textContent = 'Vider le panier';
+            viderButton.onclick = viderPanier;
+            
+            panierContainer.appendChild(totalElement);
+            panierContainer.appendChild(viderButton);
+        });
+        
+        function changerQuantite(nomProduit, changement) {
+            const panier = JSON.parse(localStorage.getItem('panier'));
+            const produitIndex = panier.findIndex(item => item.nom === nomProduit);
+            
+            if (produitIndex !== -1) {
+                panier[produitIndex].quantite += changement;
+                
+                if (panier[produitIndex].quantite <= 0) {
+                    panier.splice(produitIndex, 1);
+                }
+                
+                localStorage.setItem('panier', JSON.stringify(panier));
+                location.reload(); 
+            }
+        }
+        
+        function viderPanier() {
+            localStorage.setItem('panier', JSON.stringify([]));
+            location.reload();
+        }
+    </script>
+    
+</body>
+</html>

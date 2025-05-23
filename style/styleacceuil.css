@@ -1,0 +1,589 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+.acceuilhead{
+    text-align: center;
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff8f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #b35f6f;
+}
+
+.panel h2{
+    margin-top: 500px;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Open+Sans:wght@400&display=swap');
+        
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color:rgb(244, 224, 227);
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(244, 224, 227);
+    padding: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+img {
+    height: 100px;
+    display: block;
+    background-color: transparent;
+}
+.titre {
+    font-size: 28px;
+    color: #681c37;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.bout-liens {
+    display: flex;
+    gap: 50px;
+}
+.bout-liens a {
+    text-decoration: none;
+    color: #681c37;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+.bout-liens a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #681c37;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+    border-radius: 2px;
+}
+.bout-liens a:hover {
+    color: #a02a50;
+}
+.bout-liens a:hover::after {
+    width: 100%;
+}
+.auth-liens {
+    display: flex;
+    gap: 20px;
+}
+.auth-liens a {
+    text-decoration: none;
+    color: #681c37;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px 15px;
+    border: 2px solid #681c37;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.auth-liens a:hover {
+    background-color: #681c37;
+    color: #fff;
+
+}
+
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+   
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.toggle-btn {
+    background-color: #fff;
+    color: #b35f6f;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.toggle-btn:hover {
+    background-color: #ffe3df;
+}
+
+
+.about, .values {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+
+.values-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.value-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 200px;
+    transition: transform 0.3s;
+}
+.value-card:hover {
+    transform: translateY(-5px);
+}
+.value-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.value-card p {
+    font-weight: 500;
+    color: #b35f6f;
+}
+
+
+.social img {
+    width: 30px;
+    margin: 0 0.5rem;
+    transition: transform 0.3s;
+}
+.social img:hover {
+    transform: scale(1.1);
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  
+
+ .produits-luxueux {
+  padding: 5rem 2rem;
+  background: #fdf7f9;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.produits-luxueux h2 {
+  font-size: 3rem;
+  color: #b0006d;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.grille-produits {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 2rem;
+}
+.grille-produits::-webkit-scrollbar {
+  display: none;
+}
+.grille-produits {
+  scrollbar-width: none;
+}
+
+.carte-produit-luxe {
+  flex: 0 0 400px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  overflow: hidden;
+  scroll-snap-align: center;
+  transition: transform 0.4s ease;
+}
+
+.carte-produit-luxe:hover {
+  transform: translateY(-10px);
+}
+
+.image-produit {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.image-produit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+
+
+
+
+.carte-produit-luxe:hover .image-produit:hover img {
+  transform: scale(1.05);
+}
+
+.infos-produit {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.infos-produit h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.infos-produit p {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.btn-luxe {
+  background-color: #b0006d;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-luxe:hover {
+  background-color: #8a004f;
+}
+
+ body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/1747720159354.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.3; 
+}
+
+
+
+
+.produits-luxueux {
+  padding: 5rem 2rem;
+  background: #fdf7f9;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.produits-luxueux h2 {
+  font-size: 3rem;
+  color: #b0006d;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.grille-produits {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 2rem;
+}
+.grille-produits::-webkit-scrollbar {
+  display: none;
+}
+.grille-produits {
+  scrollbar-width: none;
+}
+
+.carte-produit-luxe {
+  flex: 0 0 400px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  overflow: hidden;
+  scroll-snap-align: center;
+  transition: transform 0.4s ease;
+}
+
+.carte-produit-luxe:hover {
+  transform: translateY(-10px);
+}
+
+.image-produit {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.image-produit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carte-produit-luxe:hover .image-produit img {
+  transform: scale(1.1);
+}
+
+.infos-produit {
+  padding: 1.5rem;
+  text-align: left;
+  
+}
+
+.infos-produit h3 {
+  font-size: 1.4rem;
+  color:#b0006d;
+  margin-bottom: 0.5rem;
+}
+
+.infos-produit p {
+  font-size: 0.95rem;
+  color:  #b0006d;
+  margin-bottom: 1rem;
+}
+
+.btn-luxe {
+  background-color: #b0006d;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-luxe:hover {
+  background-color: #8a004f;
+}
+
+.slider-section {
+   height: 100%;
+  overflow: hidden;
+  padding: 4rem 0;
+  background: transparent;
+}
+
+.slider-section .container {
+  display: flex;
+  gap: 0;
+ 
+}
+
+.panel {
+  flex:1;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  transition: flex 0.6s ease-in-out, filter 0.4s ease, transform 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.4s ease;
+ 
+}
+
+.panel:hover::after {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.panel .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 200%;
+  gap: 20px;
+  align-items: center;
+}
+
+.panel h2 {
+  font-size: 2rem;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  color: #b0276e;
+}
+
+.panel .btn {
+  padding: 10px 20px;
+  background: #ffffffdd;
+  color: #000;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+
+.panel .btn:hover {
+  background: #ff4081;
+  color: #fff;
+   transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.panel.active {
+   flex: 3;
+  z-index: 2;
+  filter: none;
+  transform: scale(1.02);
+}
+
+.panel:not(.active) {
+   filter: grayscale(80%) brightness(0.7);
+
+}
+
+#modesombre {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 12px 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #modesombre:hover {
+    background-color: #eee;
+  }
+  
+ 
+  .mode-sombre {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+ 
+  .mode-sombre .carte,
+  .mode-sombre header,
+  .mode-sombre .produits-luxueux,
+  .mode-sombre .carte-produit-luxe,
+  .mode-sombre footer {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  body, .carte, header, footer, .produits-luxueux .carte-produit-luxe{
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+ 

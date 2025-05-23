@@ -1,0 +1,115 @@
+/* Styles généraux */
+  
+body {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to top , #f6cae9,rgb(123 60 92));/* c'est le backgroud en degrade*/
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #363535;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    
+        background-color: rgb(123 60 92);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    
+}
+
+button[type="submit"]:hover {
+                 /*pour l'animation du boutton*/
+        background-color: rgb(184, 73, 128);
+        transform: scale(1.07);
+        transition: all 0.3s;
+    
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+/*en pluuuuus*/
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+img{ 
+    height:200px;
+}
+
+
+
+.success {
+    color: green;
+    font-size: 12px;
+    margin-top: 5px;
+}
+/*en pluuuuuus*/
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link a {
+    color:rgb(184, 73, 128);
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+input::placeholder {
+    text-align: center;
+}

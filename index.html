@@ -1,0 +1,220 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rare Beauty</title>
+        <link rel="stylesheet" href="style/styleacceuil.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+
+
+        <button id="modesombre" aria-label="Activer/désactiver le mode sombre">🌙</button>
+        <script>
+            const toggleButton = document.getElementById('modesombre');
+            
+            toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('mode-sombre');
+        
+            
+            if (document.body.classList.contains('mode-sombre')) {
+                toggleButton.textContent = '☀️';
+            } else {
+                toggleButton.textContent = '🌙';
+            }
+            });
+        </script>
+        
+
+
+        <header>
+            <div class="logo">
+            <img src="image/logo4-removebg-preview.png" alt="Rare Beauty Logo">
+            <span class="titre">Rare Beauty</span>
+            </div>
+        
+            <div class="bout-liens">
+            <a href="index.html">Accueil</a>
+            <a href="html/BOUTIQUE.html">Boutique</a>
+            <a href="html/panier.html">Panier</a>
+            <a href="html/DESCRIPTION.html">Description</a>
+            </div>
+        
+        
+            <div class="auth-liens">
+            <a href="html/sign-up.html">S'inscrire</a>
+            <a href="html/log in.html">Se connecter</a>
+            </div>
+        </header>
+    
+        <div class="acceuilhead">
+            <h2 class="boutique-titre">Bienvenue chez Rare Beauty</h2>
+        </div>
+
+        <section class="hero">
+            <video autoplay muted loop playsinline class="background-video">
+              <source src="image/video.mp4" type="video/mp4">
+            </video>
+          
+            <div class="hero-content">
+            
+            
+            </div>
+          </section>
+          
+
+          <div class="acceuilhead">
+            <h2 class="boutique-titre">Aussi rare qu'un Orchidée</h2>
+        </div>
+
+        
+
+        
+    <section class="slider-section">    
+    <div class="container">
+    <div class="panel" style="background-image: url('image/acceuil/acc7.jpg');">
+        <div class="content">
+        <h2 id="boite">L'alchimie du rare</h2>
+        <a href="html/DESCRIPTION.html  #paragraphe1" class="btn">Découvrir plus</a>
+        </div>
+    </div>
+    <div class="panel" style="background-image: url('image/acceuil/acc5.jpg');">
+        <div class="content">
+        <h2 id="boite" >Nos ingrédients phares</h2>
+        <a href="html/DESCRIPTION.html #paragraphe3" class="btn">Découvrir plus</a>
+        </div>
+    </div>
+    <div class="panel" style="background-image: url('image/acceuil/acc6.jpg');">
+        <div class="content">
+        <h2 id="boite">Pourquoi Rare Beauty</h2>
+        <a href="html/DESCRIPTION.html #paragraphe2" class="btn">Découvrir plus</a>
+        </div>
+    </div>
+    
+    </div>
+
+    </section> 
+    
+    <div class="scroll">
+
+    <section class="produits-luxueux">
+    <h2>Nos Meilleurs Produits</h2>
+    <div class="grille-produits">
+        <div class="carte-produit-luxe">
+        <div class="image-produit">
+            <img src="image/acceuil/acc2.jpg" alt="Produit 1">
+        </div>
+        <div class="infos-produit">
+            <h3>Rouge Velours</h3>
+            <p>Fini mat intense</p>
+            <a href="html/BOUTIQUE.html #rouge" class="btn-luxe">Découvrir</a>
+        </div>
+        </div>
+
+        <div class="carte-produit-luxe">
+        <div class="image-produit">
+            <img src="image/acceuil/acc3.jpg" alt="Produit 1">
+        </div>
+        <div class="infos-produit">
+            <h3>Blush</h3>
+            <p>Texture crémeuse</p>
+            <a href="html/BOUTIQUE.html #blush45" class="btn-luxe">Découvrir</a>
+        </div>
+        </div>
+
+        
+        <div class="carte-produit-luxe">
+        <div class="image-produit">
+            <img src="image/acceuil/acc1.jpg" alt="Produit 1">
+        </div>
+        <div class="infos-produit">
+            <h3>Eyes</h3>
+            <p>Sublimez votre regard</p>
+            <a href="html/BOUTIQUE.html #eyessh" class="btn-luxe">Découvrir</a>
+        </div>
+        </div>
+
+        <div class="carte-produit-luxe">
+        <div class="image-produit">
+            <img src="image/acceuil/acc4.jpg" alt="Produit 2">
+        </div>
+        <div class="infos-produit">
+            <h3>Parfum</h3>
+            <p>Odeurs onctueuse</p>
+            <a href="html/BOUTIQUE.html #parfum" class="btn-luxe">Découvrir</a>
+        </div>
+        </div>
+    
+        <div class="carte-produit-luxe">
+            <div class="image-produit">
+            <img src="image/pinceau/pinceau1.jpg" alt="Produit 2">
+            </div>
+            <div class="infos-produit">
+            <h3>Pinceau</h3>
+            <p>Découverez nos doux pinceaux</p>
+            <a href="html/BOUTIQUE.html #pinceau12" class="btn-luxe">Découvrir</a>
+            </div>
+        </div>
+
+        </div>
+
+    <div>
+
+
+    </div>
+
+
+    </section>
+
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css">
+    <footer class="rare-beauty-footer">
+        <div class="footer-container">
+        <div class="footer-section">
+            <h3>Rare Beauty</h3>
+            <h5>Découvrez une beauté authentique avec nos produits de maquillage de haute qualité.</h5>
+            <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        
+        
+        <div class="footer-section">
+            <h4>Contactez-nous</h4>
+            <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Beauté, Paris</li>
+            <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+            <li><i class="fas fa-envelope"></i> contact@rarebeauty.com</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <h6>Abonnez-vous pour recevoir nos offres spéciales</h6>
+            <form class="newsletter-form">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit">S'abonner</button>
+            </form>
+        </div>
+        </div>
+        
+        <div class="footer-bottom">
+        <p>&copy; 2025 Rare Beauty. Tous droits réservés. | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+        </div>
+    </footer>
+
+
+        <script src='javascript/acceuiljs.js' defer></script>
+    </body>
+    </html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Beauty - Boutique</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <button id="modesombre" aria-label="Activer/désactiver le mode sombre">🌙</button>
+    <script>
+        const toggleButton = document.getElementById('modesombre');
+      
+        toggleButton.addEventListener('click', () => {
+          document.body.classList.toggle('mode-sombre');
+      
+          
+          if (document.body.classList.contains('mode-sombre')) {
+            toggleButton.textContent = '☀️';
+          } else {
+            toggleButton.textContent = '🌙';
+          }
+        });
+      </script>
+      
+      <header>
+        <div class="logo">
+          <img src="../image/logo4-removebg-preview.png" alt="Rare Beauty Logo">
+          <span class="titre">Rare Beauty</span>
+        </div>
+    
+        <div class="bout-liens">
+          <a href="../index.html">Accueil</a>
+          <a href="./BOUTIQUE.html">Boutique</a>
+          <a href="./panier.html">Panier</a>
+          <a href="./DESCRIPTION.html">Description</a>
+        </div>
+      
+        <div class="auth-liens">
+          <a href="./sign-up.html">S'inscrire</a>
+          <a href="./log in.html">Se connecter</a>
+        </div>
+      </header>
+
+    
+    <div class="boutique-header">
+        <h2 class="boutique-titre">NOTRE BOUTIQUE</h2>
+        <p id="blush45" class="boutique-soustitre">Découvrez nos meilleurs produits</p>
+    </div>
+    <main class="main">
+        <div class="scroll">
+           
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit2-image" src="../image/blush/blush2.jpg" alt="Blush">
+                </div>
+                <h2>Blush</h2>
+                <p class="rating">⭐⭐⭐⭐ <a href="#">46 REVIEWS</a></p>
+                <div class="teintes">
+                    <div class="teinte active" style="background:#c4493a" onclick="changerTeinte('produit2-image', '../image/blush/blush2.jpg', this)"></div>
+                    <div class="teinte" style="background:#721225" onclick="changerTeinte('produit2-image', '../image/blush/blush3.jpg', this)"></div>
+                    <div class="teinte" style="background:#ad5049" onclick="changerTeinte('produit2-image', '../image/blush/blush4.jpg', this)"></div>
+                </div>
+                <button class="bouton-achat" data-prix="30">AJOUTER AU PANIER • $30</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit3-image" src="../image/eye_liner/lyner.jpg" alt="Eye liner">
+                </div>
+                <h2>Eye liner</h2>
+                <p id="eyessh" class="rating">⭐⭐⭐⭐⭐ <a href="#">85 REVIEWS</a></p>
+                <button class="bouton-achat" data-prix="25">AJOUTER AU PANIER • $25</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit1-image" src="../image/anti_cerne/cerne3.jpg" alt="Anti cernes">
+                </div>
+                <h2>Anti-cernes</h2>
+                <p id="rouge" class="rating">⭐⭐⭐⭐⭐ <a href="#">52 REVIEWS</a></p>
+                <div class="teintes">
+                    <div class="teinte active" style="background:#e9d3b4" onclick="changerTeinte('produit1-image', '../image/anti_cerne/cerne3.jpg', this)"></div>
+                    <div class="teinte" style="background:#d29a62" onclick="changerTeinte('produit1-image', '../image/anti_cerne/cerne4.jpg', this)"></div>
+                    <div class="teinte" style="background:#a65c3c" onclick="changerTeinte('produit1-image', '../image/anti_cerne/cerne5.jpg', this)"></div>
+                </div>
+                <button class="bouton-achat" data-prix="35">AJOUTER AU PANIER • $35</button>
+            </section>
+
+          
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit4-image" src="../image/mascara/mascara1.jpg" alt="Mascara">
+                </div>
+                <h2>Mascara</h2>
+                <p class="rating">⭐⭐⭐⭐ <a href="#">38 REVIEWS</a></p>
+                <button class="bouton-achat" data-prix="18">AJOUTER AU PANIER • $18</button>
+            </section>
+        </div>
+
+        <div class="scroll">
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit7-image" src="../image/rouge à levre/rouge1.jpg" alt="Rouge à lèvres">
+                </div>
+                <h2>Rouge à lèvres</h2>
+                <p id="parfum" class="rating">⭐⭐⭐⭐⭐ <a href="#">72 REVIEWS</a></p>
+                <div class="teintes">
+                    <div class="teinte active" style="background:#ed7577" onclick="changerTeinte('produit7-image', '../image/rouge à levre/rouge1.jpg', this)"></div>
+                    <div class="teinte" style="background:#bf3b50" onclick="changerTeinte('produit7-image', '../image/rouge à levre/rouge2.jpg', this)"></div>
+                    <div class="teinte" style="background:#982f36" onclick="changerTeinte('produit7-image', '../image/rouge à levre/rouge3.jpg', this)"></div>
+                    <div class="teinte" style="background:#954f43" onclick="changerTeinte('produit7-image', '../image/rouge à levre/rouge4.jpg', this)"></div>
+                </div>
+                <button class="bouton-achat" data-prix="42">AJOUTER AU PANIER • $42</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit8-image" src="../image/eyesshadow/palette.jpg" alt="Eyesshadow">
+                </div>
+                <h2>Eyesshadow</h2>
+                <p class="rating">⭐⭐⭐⭐ <a href="#">47 REVIEWS</a></p>
+                <button class="bouton-achat" data-prix="30">AJOUTER AU PANIER • $30</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit5-image" src="../image/fond de teint/fond1.jpg" alt="Fond de teint">
+                </div>
+                <h2>Fond de teint</h2>
+                <p class="rating">⭐⭐⭐⭐⭐ <a href="#">64 REVIEWS</a></p>
+                <div class="teintes">
+                    <div class="teinte active" style="background:#f8d5b3" onclick="changerTeinte('produit5-image', '../image/fond de teint/fond1.jpg', this)"></div>
+                    <div class="teinte" style="background:#e0b38a" onclick="changerTeinte('produit5-image', '../image/fond de teint/fond2.jpg', this)"></div>
+                    <div class="teinte" style="background:#c08a62" onclick="changerTeinte('produit5-image', '../image/fond de teint/fond3.jpg', this)"></div>
+                    <div class="teinte" style="background:#a5623a" onclick="changerTeinte('produit5-image', '../image/fond de teint/fond4.jpg', this)"></div>
+                    <div class="teinte" style="background:#c08a62" onclick="changerTeinte('produit5-image', '../image/fond de teint/fond5.jpg', this)"></div>
+                    <div class="teinte" style="background:#a5623a" onclick="changerTeinte('produit5-image', '../image/fond de teint/fond6.jpg', this)"></div>
+                </div>
+                <button class="bouton-achat" data-prix="19">AJOUTER AU PANIER • $19</button>
+            </section>
+ <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit6-image" src="../image/highlighter/high1.jpg" alt="Highlighter">
+                </div>
+                <h2>Highlighter</h2>
+                <p class="rating">⭐⭐⭐⭐ <a href="#">41 REVIEWS</a></p>
+                <div class="teintes">
+                    <div class="teinte active" style="background:#d2bca8" onclick="changerTeinte('produit6-image', '../image/highlighter/high1.jpg', this)"></div>
+                    <div class="teinte" style="background:#d6a282" onclick="changerTeinte('produit6-image', '../image/highlighter/high2.jpg', this)"></div>
+                    <div class="teinte" style="background:#ba7858" onclick="changerTeinte('produit6-image', '../image/highlighter/high3.jpg', this)"></div>
+                    <div class="teinte" style="background:#ce9085" onclick="changerTeinte('produit6-image', '../image/highlighter/high4.jpg', this)"></div>
+                </div>
+                <button class="bouton-achat" data-prix="26">AJOUTER AU PANIER • $26</button>
+            </section>
+            
+        </div>
+
+        
+        <div class="scroll">
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit6-image" src="../image/parfum/parfum2.jpg" alt="Highlighter">
+                </div>
+                <h2>Hair Fragrance and confort body Mist Mini</h2>
+                <p class="rating">⭐⭐⭐⭐ <a href="#">41 REVIEWS</a></p>
+                <button class="bouton-achat" data-prix="60">AJOUTER AU PANIER • $60</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit7-image" src="../image/parfum/parfum4.jpg" alt="Rouge à lèvres">
+                </div>
+                <h2>Find Comfort Body & Hair Fragrance Mist</h2>
+                <p class="rating">⭐⭐⭐⭐⭐ <a href="#">72 REVIEWS</a></p>
+              
+                <button class="bouton-achat" data-prix="50">AJOUTER AU PANIER • $50</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit8-image" src="../image/parfum/parfum3.jpg" alt="Eyesshadow">
+                </div>
+                <h2>Find Comfort Hydrating Body Lotion Mini</h2>
+                <p class="rating">⭐⭐⭐⭐ <a href="#">47 REVIEWS</a></p>
+                <button class="bouton-achat" data-prix="100">AJOUTER AU PANIER • $100</button>
+            </section>
+        </div>
+
+
+        <div class="scroll">
+
+            
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit7-image" src="../image/pinceau/pinceau1.jpg" alt="Rouge à lèvres">
+                </div>
+                <h2>Liquid Touch Foundation Brush</h2>
+                <p class="rating">⭐⭐⭐⭐⭐ <a href="#">72 REVIEWS</a></p>
+              
+                <button class="bouton-achat" data-prix="13">AJOUTER AU PANIER • $13</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit6-image" src="../image/pinceau/eponge.jpg" alt="Highlighter">
+                </div>
+                <h2>Liquid Touch Multi-Tasking Sponge</h2>
+                <p class="rating">⭐⭐⭐⭐ <a href="#">41 REVIEWS</a></p>
+                <button class="bouton-achat" data-prix="20">AJOUTER AU PANIER • $20</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit8-image" src="../image/pinceau/pineau2.jpg" alt="Eyesshadow">
+                </div>
+                <h2>Soft Pinch Blush Brush</h2>
+                <p class="rating">⭐⭐⭐⭐ <a href="#">47 REVIEWS</a></p>
+                <button class="bouton-achat" data-prix="15">AJOUTER AU PANIER • $15</button>
+            </section>
+
+            <section class="produit-carte">
+                <div class="image-container">
+                    <img id="produit8-image" src="../image/pinceau/pinceau3.jpg" alt="Eyesshadow">
+                </div>
+                <h2>Soft Pinch Blush Brush</h2>
+                <p id="pinceau12" class="rating">⭐⭐⭐⭐ <a href="#">47 REVIEWS</a></p>
+                <button class="bouton-achat" data-prix="27">AJOUTER AU PANIER • $27</button>
+            </section>
+        </div>
+
+
+    </main>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/description.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css">
+    <footer class="rare-beauty-footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Rare Beauty</h3>
+            <h5>Découvrez une beauté authentique avec nos produits de maquillage de haute qualité.</h5>
+            <div class="social-icons">
+              <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          
+          
+          
+          <div class="footer-section">
+            <h4>Contactez-nous</h4>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Beauté, Paris</li>
+              <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+              <li><i class="fas fa-envelope"></i> contact@rarebeauty.com</li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <h6>Abonnez-vous pour recevoir nos offres spéciales</h6>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Votre email" required>
+              <button type="submit">S'abonner</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 Rare Beauty. Tous droits réservés. | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+        </div>
+      </footer>
+      
+      
+
+    <script src="../javascript/script.js"></script>
+    <script src="../javascript/scriptpanier.js"></script>
+</body>
+</html>

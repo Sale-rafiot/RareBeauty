@@ -1,0 +1,747 @@
+/*css du header*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Open+Sans:wght@400&display=swap');
+        
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffaf5;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(244, 224, 227);
+    padding: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+img {
+    height: 100px;
+    display: block;
+    background-color: transparent;
+}
+.titre {
+    font-size: 28px;
+    color: #b0276e;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.bout-liens {
+    display: flex;
+    gap: 50px;
+}
+.bout-liens a {
+    text-decoration: none;
+    color: #b0276e;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+.bout-liens a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #681c37;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+    border-radius: 2px;
+}
+.bout-liens a:hover {
+    color: #a02a50;
+}
+.bout-liens a:hover::after {
+    width: 100%;
+}
+.auth-liens {
+    display: flex;
+    gap: 20px;
+}
+.auth-liens a {
+    text-decoration: none;
+    color: #b0276e;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px 15px;
+    border: 2px solid #b0276e;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.auth-liens a:hover {
+    background-color: #b0276e;
+    color: #fff;
+
+}
+
+
+
+/*fin du css pour le header*/
+
+
+
+
+/* Variables de style luxe */
+:root {
+    --luxe-black: #1a1a1a;
+    --luxe-white: #f8f8f8;
+    --luxe-gold: #c0a062;
+    --luxe-lightgrey: #e8e8e8;
+    --minimal-padding: 80px;
+    --primary-color: #b0276e;
+    --primary-light: #a02a50;
+    --background-color: rgb(244, 224, 227);
+}
+
+/* Reset minimaliste */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "neue-haas-unica", sans-serif;
+    color: var(--luxe-black);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+
+/* je floute mon visage a gauche*/
+.image-floutee {
+  width: 300px;
+  height: auto;
+  display: block;
+
+  /* Masque linéaire : flou à gauche, net à droite */
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
+  -webkit-mask-size: cover;
+  mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
+  mask-size: cover;
+}
+
+
+/**/
+
+h1, h2, h3 {
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--luxe-black);
+}
+
+.luxury-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section - Style luxe amélioré */
+.luxury-hero {
+    display: flex;
+    height: 90vh;
+    position: relative;
+    align-items: center;
+    background: linear-gradient(to right, var(--background-color) 50%, transparent 100%);
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--minimal-padding);
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    border-top: 1px solid var(--primary-color);
+    padding-top: 15px;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+/* Gallery Minimaliste améliorée */
+.minimal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: var(--minimal-padding) 0;
+    padding: 0 var(--minimal-padding);
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute ;
+    bottom: 30px;
+    left: 65px;
+    color: white;
+    background-color:rgb(245 235 238);
+    padding: 15px 25px;
+    border-radius: 4px;
+    max-width: 80%;
+    transform: translateY(20px);
+    opacity: 0.9;
+    transition: all 0.5s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* Luxury Description avec image - version améliorée */
+.luxury-description-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 var(--minimal-padding);
+    margin: 100px 0;
+}
+
+
+.luxury-description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+.luxury-description h2:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.description-content {
+    max-width: 600px;
+}
+
+.description-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.luxury-description-image {
+    flex: 1;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-description-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.luxury-description-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Signature Elements améliorés */
+.signature-elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 var(--minimal-padding);
+    margin: 100px 0;
+}
+
+.element {
+    padding: 30px;
+    background-color: var(--luxe-white);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.element:hover {
+    transform: translateY(-10px);
+}
+
+.element-number {
+    font-size: 1rem;
+    color: var(--luxe-gold);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.element h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.element h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    :root {
+        --minimal-padding: 40px;
+    }
+    
+    .luxury-hero {
+        height: auto;
+        padding: 80px 0;
+        background: var(--background-color);
+    }
+    
+    .luxury-description-container {
+        flex-direction: column;
+    }
+    
+    .luxury-description {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .luxury-description-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .minimal-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .signature-elements {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+/*css pour limage a cote du titre */
+/* Hero Section avec image */
+.luxury-hero {
+    display: flex;
+    height: 90vh;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 0 var(--minimal-padding);
+    z-index: 2;
+    max-width: 50%;
+}
+
+.hero-image {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1s ease;
+}
+
+.luxury-hero:hover .hero-image img {
+    transform: scale(1.03);
+}
+/*carre transparent stylé*/
+
+.description-content {
+    background: linear-gradient(
+        to right,
+        rgba(255, 240, 245, 0.3), /* Rose très clair transparent */
+        rgba(255, 255, 255, 0.4) /* Blanc plus opaque */
+    );
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: -20px 20px 0px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+/*fin*/
+/*transparent*/
+.transparent {
+  display: flex;
+  align-items: stretch; /* pour que l’image suive la hauteur du texte */
+  gap: 2rem;
+}
+
+.transparent img.champ-image {
+  object-fit: cover;
+  height: 100%;       /* prend toute la hauteur du bloc parent */
+  max-width: 100%;
+  border-radius: 12px;
+}
+/*fin transparent*/
+
+
+
+
+/* Effet de superposition élégant */
+.hero-image::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(244, 224, 227, 0.3) 0%, transparent 30%);
+    z-index: 1;
+}
+
+/* Version mobile */
+@media (max-width: 1024px) {
+    .luxury-hero {
+        flex-direction: column;
+        height: auto;
+        min-height: 80vh;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        padding: 80px var(--minimal-padding) 40px;
+        order: 1;
+    }
+    
+    .hero-image {
+        width: 100%;
+        height: 50vh;
+        order: 2;
+    }
+    
+    .hero-image::before {
+        background: linear-gradient(to top, rgba(244, 224, 227, 0.3) 0%, transparent 30%);
+    }
+}
+/*effet dynamique de cette image */
+.luxury-hero {
+    perspective: 100px;
+    overflow-x: hidden; 
+}
+
+.hero-image {
+    transform-style: preserve-3d;
+}
+
+.hero-image img {
+    transform: translateZ(-10px) scale(1.1);
+}
+/*animation d'apparition*/
+.hero-image img {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards 0.5s;
+}
+
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+/*css du footer*/
+/* Dans votre fichier CSS */
+/* Import des polices d'icônes */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.rare-beauty-footer {
+  background-color: #fff0f5; /* Rose très clair */
+  color: #333;
+  padding: 40px 0 0;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #ffc0cb; /* Bordure rose */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.footer-section h3 {
+  color: #d63384; /* Rose Rare Beauty */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  color: #d63384;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 2px;
+  background-color: #ffc0cb;
+}
+
+.footer-section p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section ul li i {
+  margin-right: 10px;
+  color: #d63384;
+}
+
+.footer-section a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #d63384;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #ffc0cb;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #d63384;
+  transform: translateY(-3px);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ffc0cb;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  padding: 10px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #a02265;
+}
+
+.footer-bottom {
+  background-color: #ffd6e7; /* Rose un peu plus soutenu */
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #d63384;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-section {
+    flex: 100%;
+    text-align: center;
+  }
+  
+  .footer-section h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/*mode sombre*/
+#modesombre {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 12px 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration-color: #eee;
+  }
+  
+  #modesombre:hover {
+    background-color: #eee;
+  }
+  
+  /* Mode sombre */
+  .mode-sombre {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  .mode-sombre .luxury-hero {
+    background: linear-gradient(to right, #1e1e1e, #1e1e1e ); /* tons sombres */
+    color: #f0f0f0;
+}
+
+  
+  /* Exemple : si tu veux aussi inverser les couleurs de cartes, boutons, etc. */
+  .mode-sombre .carte,
+  .mode-sombre header,
+  .mode-sombre .luxury-hero,
+  .mode-sombre footer {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  body, .carte, header, footer, .luxury-hero  {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  .transparent {
+    width: 100%;
+    height: 800px; /* augmente ou diminue selon ce que tu veux */
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    margin: 0 auto;
+  
+    /* Effet fondu en haut et en bas */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  }
